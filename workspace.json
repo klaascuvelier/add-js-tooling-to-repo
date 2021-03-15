@@ -19,6 +19,17 @@
             "jestConfig": "packages/tooling/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/tooling",
+            "tsConfig": "packages/tooling/tsconfig.lib.json",
+            "packageJson": "packages/tooling/package.json",
+            "main": "packages/tooling/index.ts",
+            "assets": ["packages/tooling/*.md", "packages/assets/**/*"]
+          }
         }
       }
     }
