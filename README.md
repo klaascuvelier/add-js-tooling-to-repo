@@ -7,6 +7,10 @@ This is just a first implementation and mainly meant for my own usage.
 
 The current implementation is very brittle, not a lot of safety checks, hardening ... has been added.
 
+## Usage
+
+` npx add-js-tooling-to-repo`
+
 ## Work
 
 This project was generated using [Nx](https://nx.dev).
