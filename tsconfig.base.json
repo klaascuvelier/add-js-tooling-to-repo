@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@add-js-tooling-to-repo/tooling": ["packages/tooling/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
