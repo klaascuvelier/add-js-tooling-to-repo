@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "prettier": "prettier --write '**/*.{js,ts,css,scss,less,md,json,yml,html}'",
+    "prettier-check": "prettier --list-different '**/*.{js,ts,css,scss,less,md,json,yml,html}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "HUSKY_DEBUG=1 exec < /dev/tty && node_modules/.bin/git-cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "concurrent": false,
+    "linters": {
+      "**/*.{js,ts,css,scss,less,md,json,yml,html,yaml}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  }
+}

@@ -27,8 +27,20 @@
             "outputPath": "dist/packages/tooling",
             "tsConfig": "packages/tooling/tsconfig.lib.json",
             "packageJson": "packages/tooling/package.json",
-            "main": "packages/tooling/index.ts",
-            "assets": ["packages/tooling/*.md", "packages/assets/**/*"]
+            "main": "packages/tooling/add-js-tooling-to-repo.ts",
+            "assets": [
+              "packages/tooling/*.md",
+              {
+                "glob": "**/.*",
+                "input": "packages/tooling/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*.*",
+                "input": "packages/tooling/assets",
+                "output": "assets"
+              }
+            ]
           }
         }
       }

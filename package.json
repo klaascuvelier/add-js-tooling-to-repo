@@ -23,7 +23,8 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "publish": "cd ./packages/tooling && npm version patch && cd ../../ && npx nx build tooling && cd ./dist/packages/tooling && npm publish"
   },
   "private": true,
   "devDependencies": {
