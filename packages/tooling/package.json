@@ -4,7 +4,7 @@
   "bin": {
     "add-js-tooling-to-repo": "add-js-tooling-to-repo.js"
   },
-  "peerDependencies": {
+  "dependencies": {
     "chalk": "4.1.0"
   }
 }
